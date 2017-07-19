@@ -16,15 +16,15 @@ ActiveRecord::Schema.define(version: 20170719180028) do
   enable_extension "plpgsql"
 
   create_table "beers", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "type_of_beer", null: false
-    t.float "alchohol_content", null: false
+    t.string "name"
+    t.string "type_of_beer"
+    t.float "alchohol_content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "review_text", null: false
+    t.string "review_text"
     t.integer "beer_id"
     t.integer "user_id"
     t.datetime "created_at", null: false

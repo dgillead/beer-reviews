@@ -1,10 +1,10 @@
 class CreateReviews < ActiveRecord::Migration[5.1]
   def change
     create_table :reviews do |t|
-      t.string :review_text, null: false
+      t.string :review_text
       t.integer :beer_id
       t.integer :user_id
-      
+
       t.timestamps
     end
   end
