@@ -5,6 +5,10 @@ class BeersController < ApplicationController
     @beer = Beer.new
   end
 
+  def index
+    @beers = Beer.all
+  end
+
   def create
     @beer = Beer.new(new_beer_params)
     if @beer.save
