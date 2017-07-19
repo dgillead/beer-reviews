@@ -5,6 +5,21 @@ class BeersController < ApplicationController
     @beer = Beer.new
   end
 
+  def destroy
+    find_beer
+    @beer.destroy
+    redirect_to '/beers'
+  end
+
+  def edit
+    render :edit, locals: { beer: @beer }
+  end
+
+  def update
+    @beer.update(new_beer_params)
+    redirect_to @beer
+  end
+
   def index
     @beers = Beer.all
   end

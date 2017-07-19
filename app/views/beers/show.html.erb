@@ -3,3 +3,5 @@
 <p>Alchohol Cotent: <%= beer.alchohol_content %></p>
 
 <%= link_to 'Beer List', beers_path %>
+<%= link_to 'Remove Beer', @beer, method: :delete %>
+<%= link_to 'Edit Beer', edit_beer_path %>
