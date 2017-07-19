@@ -1,0 +1,16 @@
+<%= form_for (beer) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: 'required' %>
+  </div>
+
+  <div>
+    <%= f.label :type %>
+    <%= f.text_field :type, required: 'required' %>
+  </div>
+
+  <div>
+    <%= f.label :alchohol_content %>
+    <%= f.number_field :alchohol_content, :step => '0.01', required: 'required' %>
+  </div>
+<% end %>
