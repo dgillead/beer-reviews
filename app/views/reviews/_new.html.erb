@@ -1,0 +1,10 @@
+<%= form_for ([beer, review]) do |f| %>
+  <div>
+    <%= f.label :review_text %>
+    <%= f.text_area :review_text, required: 'required' %>
+  </div>
+
+  <div class='actions'>
+    <%= f.submit %>
+  </div>
+<% end %>
