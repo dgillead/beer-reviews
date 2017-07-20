@@ -6,3 +6,4 @@
 <%= link_to 'Remove Beer', @beer, method: :delete %>
 <%= link_to 'Edit Beer', edit_beer_path %>
 <%= link_to 'Review this Beer', new_beer_review_path(@beer) %>
+<%= link_to 'See Reviews', beer_reviews_path(@beer) %>

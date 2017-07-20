@@ -1,0 +1,7 @@
+<h1>Review for <%= beer.name %></h1>
+
+<p><%= review.review_text %></p>
+
+<%= link_to 'Remove Review', beer_review_path(beer, review), method: :delete %>
+<%= link_to 'Edit Review', edit_beer_review_path(beer, review) %>
+<%= link_to 'Beer List', beers_path %>

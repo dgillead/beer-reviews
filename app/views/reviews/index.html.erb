@@ -1,0 +1,9 @@
+<h1>Reviews for <%= beer.name %></h1>
+
+<ul>
+  <% reviews.each do |review| %>
+    <li><a href="reviews/<%= review.id %>"><%= review.review_text %></a></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Beer List', beers_path %>
